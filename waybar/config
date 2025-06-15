@@ -1,0 +1,113 @@
+{
+    "layer": "top", 
+    "bar_id": "bar-0",
+    "mode": "dock",
+    "ipc": false,
+    "position": "left", 
+    "spacing": 50, 
+    "margin-bottom": 0,
+    "margin-left": -0,
+    "margin-right": 0,
+    "margin-top": 0,
+    "modules-left": ["hyprland/workspaces", "group/backlight"],
+    "modules-center": ["group/date", "group/time"],
+    "modules-right": ["battery", "tray"],
+	"group/battery": {
+		"orientation": "vertical",
+		"modules": [
+			"battery",
+			"battery#2"
+		]
+    },
+	"group/backlight": {
+		"orientation": "vertical",
+		"modules": [
+			"backlight",
+			"backlight#2"
+		]
+    },
+	"group/date": {
+		"orientation": "vertical",
+		"modules": [
+			"clock#3",
+			"clock#2",
+			"clock"
+		]
+    },
+	"group/time": {
+		"orientation": "vertical",
+		"modules": [
+			"clock#4",
+			"clock#5",
+			"clock#6"
+		]
+    },
+
+    "hyprland/workspaces": {
+	     "on-click": "activate",
+         "disable-scroll": false,
+         "all-outputs": true,
+         "format": "{icon}", 
+         "format-icons": {
+             "active": "[☤]",
+             "urgent": "[☤]",
+             "default": "[]"
+         }
+    },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 10
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+	"interval": 1,
+	"format": "{:%Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    },
+    "clock#2": {
+        // "timezone": "America/New_York",
+	"interval": 1,
+	"format": "{:%b}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    },
+    "clock#3": {
+        // "timezone": "America/New_York",
+	"interval": 1,
+	"format": "{:%d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    },
+    "clock#4": {
+        // "timezone": "America/New_York",
+	"interval": 1,
+	"format": "{:%H}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    },
+    "clock#5": {
+        // "timezone": "America/New_York",
+	"interval": 1,
+	"format": "{:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    },
+    "clock#6": {
+        // "timezone": "America/New_York",
+	"interval": 1,
+	"format": "{:%OS}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    },
+    "battery": {
+        "states": {
+            "good": 80,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon}",
+        "tooltip": true,
+        "tooltip-format": "{capacity}%", 
+        "format-icons": ["[☠]", "[⸸]", "[✝]", "[⚚]", "[☤]"]
+    },
+    "backlight#2": {
+        "format": "{icon}",
+        "format-icons": ["[✝]", "[✝]", "[☪]", "[]", "[]", "[]", "[]", "[⚚]", "[☤]"]
+    },
+   
+}
